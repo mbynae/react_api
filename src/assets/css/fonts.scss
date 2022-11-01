@@ -67,3 +67,33 @@
         url("../fonts/Rajdhani-Bold.ttf") format("truetype");
     font-display: swap;
 }
+
+@font-face {
+    font-family: "GmarketSans-Display";
+    font-weight: 300;
+    font-style: normal;
+    src: url("../fonts/GmarketSansTTFLight.eot");
+    src: url("../fonts/GmarketSansTTFLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GmarketSansTTFLight.woff2") format("woff2"), url("../fonts/GmarketSansTTFLight.woff") format("woff"),
+        url("../fonts/GmarketSansTTFLight.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GmarketSans-Display";
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/GmarketSansTTFMedium.eot");
+    src: url("../fonts/GmarketSansTTFMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/GmarketSansTTFMedium.woff2") format("woff2"),
+        url("../fonts/GmarketSansTTFMedium.woff") format("woff"), url("../fonts/GmarketSansTTFMedium.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GmarketSans-Display";
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/GmarketSansTTFBold.eot");
+    src: url("../fonts/GmarketSansTTFBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GmarketSansTTFBold.woff2") format("woff2"), url("../fonts/GmarketSansTTFBold.woff") format("woff"),
+        url("../fonts/GmarketSansTTFBold.ttf") format("truetype");
+    font-display: swap;
+}
