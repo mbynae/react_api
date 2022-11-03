@@ -29,6 +29,7 @@ const Reference = () => {
     //     .catch(error => console.log('error', error));
     // }, []);
 
+    // https://mbynae.github.io/react_api/src/utils/reference.json
     return (
         <>
             <Header />
