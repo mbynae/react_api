@@ -1,0 +1,138 @@
+{
+    "type": "css",
+    "cssRefer": [
+        {
+            "num": 1,
+            "title": "animation-fill-mode",
+            "desc": "animation-fill-mode은 애니메이션이 끝난 후의 상태를 설정합니다.",
+            "descBasic": "none, forward, backward, both",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐🌚🌚",
+            "definition": [
+                "animation-fill-mode 속성은 애니메이션이 진행되지 않을 때의 모양을 정합니다. 즉, 시작하기 전, 끝난 후의 모양을 정합니다."
+            ]
+            
+        },
+        {
+            "num": 2,
+            "title": "animation-delay",
+            "desc": "animation-delay은 애니메이션 지연 시간을 설정합니다.",
+            "descBasic": "숫자s, 숫자ms",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐⭐⭐",
+            "definition": [
+                "animation-delay 속성은 애니메이션의 시작을 지연시키는 속성입니다."
+            ]
+            
+        },
+        {
+            "num": 3,
+            "title": "animation-iteration-count",
+            "desc": "animation-iteration-count은 애니메이션의 반복 횟수를 설정합니다.",
+            "descBasic": "숫자, infinite",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐🌚🌚",
+            "definition": [
+                "animation-iteration-count 속성은 애니메이션 반복 횟수 설정합니다."
+            ]
+            
+        },
+        {
+            "num": 4,
+            "title": "animation-duration",
+            "desc": "animation-duration은 애니메이션 움직임 시간을 설정합니다.",
+            "descBasic": "숫자s",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐⭐⭐",
+            "definition": [
+                "animation-duration 속성은 애니메이션의 진행 시간을 정하는 속성입니다"
+            ]
+            
+        },
+        {
+            "num": 5,
+            "title": "animation-direction",
+            "desc": "animation-direction은 애니메이션 움직임 방향을 설정합니다.",
+            "descBasic": "normal, reverse, alternate, alternate-reverse",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐🌚🌚",
+            "definition": [
+                "animation-direction 속성은 애니메이션에 사용되는 키프레임의 진행 방향을 지정합니다."
+            ]
+            
+        },
+        {
+            "num": 6,
+            "title": "background-attachment",
+            "desc": "background-attachment는 배경 이미지의 고정 여부를 설정합니다.",
+            "descBasic": "scrollm fixed, local",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐🌚🌚",
+            "definition": [
+                "background-attachment 속성은 배경 이미지의 스크롤 여부를 정합니다."
+            ]
+            
+        },
+        {
+            "num": 7,
+            "title": "background-color",
+            "desc": "background-color는 백그라운드 색을 설정합니다.",
+            "descBasic": "color, transparent, currentcolor, inherit, initial, revert, revert-layer, unset",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐⭐⭐",
+            "definition": [
+                "background-color 속성은 배경의 색을 정합니다",
+                "그 색으로 border와 padding을 포함한 영역을 칠합니다. margin 영역은 칠하지 않습니다."
+            ]
+            
+        },
+        {
+            "num": 8,
+            "title": "background-image",
+            "desc": "background-image는 백그라운드 이미지 속성을 설정합니다.",
+            "descBasic": "linear-gradient, inherit, initial, revert, revert-layer, unset",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐⭐⭐",
+            "definition": [
+                "background-image 속성은 이미지를 배경으로 사용하게 하는 속성입니다.",
+                "background-image 속성은 왼쪽 위에서 시작하여 가로 방향과 세로 방향으로 해당 요소를 다 채울 때까지 반복되어 나옵니다. 반복 여부는 background-repeat 속성으로 정합니다."
+            ]
+            
+        },
+        {
+            "num": 9,
+            "title": "background-position",
+            "desc": "background-position는 백그라운드 이미지의 위치 영역을 설정합니다.",
+            "descBasic": "top, bottom, left, right, center, valueX/valueY",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐⭐⭐",
+            "definition": [
+                "background-position 속성은 배경 이미지의 위치를 정하는 속성입니다."
+            ]
+            
+        },
+        {
+            "num": 10,
+            "title": "background-repeat",
+            "desc": "background-repeat는 백그라운드 이미지 반복 여부를 설정합니다.",
+            "descBasic": "no-repeat, repeat, space, round",
+            "descApple": "flexbox",
+            "descVer": "CSS3",
+            "descStar": "⭐⭐⭐⭐⭐",
+            "definition": [
+                "background-repeat 속성은 반복한 이미지는 기본값에선 요소 크기에 따라 잘릴 수 있습니다.",
+                "하지만 잘리지 않도록 배경 이미지 크기를 조절하거나(round) 끝에서 끝까지 고르게 분배(space)할 수 있습니다."
+            ]
+            
+        }
+    ] 
+}
