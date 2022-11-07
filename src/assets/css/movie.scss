@@ -1,0 +1,190 @@
+.movie__inner {
+    h2 {
+        font-size: 25px;
+        font-family: var(--font-sub2);
+        color: var(--white);
+        font-weight: 800;
+        margin-bottom: 25px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+            width: 23%;
+            position: relative;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            em {
+                display: block;
+                height: 80px;
+                margin-bottom: 30px;
+                font-family: --var(--font-sub3);
+            }
+
+            .title {
+                display: inline-block;
+                padding: 5px 0;
+            }
+
+            .star {
+                background: #fff;
+                color: #000;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                width: 30px;
+                height: 30px;
+                border-radius: 100px;
+                text-align: center;
+                line-height: 30px;
+                font-weight: 800;
+            }
+        }
+
+        img {
+            width: 100%;
+            // max-height: 400px;
+            margin-bottom: 10px;
+        }
+    }
+
+    a {
+        color: var(--white);
+    }
+}
+
+.movie__search {
+    margin-bottom: 100px;
+
+    .container {
+        position: relative;
+    }
+
+    h2 {
+        color: var(--white);
+        font-size: 40px;
+        text-indent: -9999px;
+        height: 0;
+    }
+
+    input {
+        background: #000;
+        border: 2px solid var(--white);
+        border-radius: 50px;
+        font-size: 20px;
+        color: #fff;
+        width: 100%;
+        padding: 14px 30px;
+        font-family: var(--font-sub1);
+    }
+    button {
+        position: absolute;
+        right: 6px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 0;
+        font-family: var(--font-sub1);
+        font-weight: 700;
+        cursor: pointer;
+        z-index: 1000;
+    }
+}
+
+.movie__PopularBox {
+    margin-bottom: 150px;
+
+    .container {
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 40px;
+            font-family: var(--font-sub2);
+            font-weight: 700;
+        }
+
+        .popular__inner {
+            width: 100%;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+
+            .popular__view {
+                width: 6300px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                li {
+                    width: 3%;
+                    margin-right: 32px;
+                    position: relative;
+                    transition: all 0.3s;
+
+                    a {
+                        img {
+                            width: 276px;
+                            height: 400px;
+                            margin-bottom: 10px;
+                        }
+
+                        span {
+                            font-size: 16px;
+                            color: var(--white);
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        width: 60px;
+                        height: 60px;
+                        font-size: 25px;
+                        color: #fff;
+                        font-weight: 800;
+                        position: absolute;
+                        left: 10px;
+                        top: 30px;
+                        z-index: 10000;
+                        font-family: var(--font-sub2);
+                    }
+                    &:nth-child(1)::before {
+                        content: "TOP 1";
+                    }
+                    &:nth-child(2)::before {
+                        content: "TOP 2";
+                    }
+                    &:nth-child(3)::before {
+                        content: "TOP 3";
+                    }
+                    &:nth-child(4)::before {
+                        content: "TOP 4";
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .popular__inner::-webkit-scrollbar {
+            opacity: 0;
+            width: 5px;
+            height: 5px;
+        }
+        .popular__inner::-webkit-scrollbar-thumb {
+            border-radius: 50px;
+            background: #dbdbdb;
+        }
+        .popular__inner::-webkit-scrollbar-track {
+        }
+    }
+}
