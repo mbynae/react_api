@@ -22,7 +22,7 @@ const Movie = () => {
 
     const search = (query) => {
         //자바스크립트에서 데이터 가져오는 방법
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=a3c2b7c652a8a847c713f7040bb7cc1d&language=ko-KO&page=1&include_adult=false&query=${query}`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=a3c2b7c652a8a847c713f7040bb7cc1d&language=ko-KO&query=${query}&page=1&include_adult=false&region=KR`)
             .then((response) => response.json())
             .then((result) => setMovies(result.results))
             .catch((error) => console.log(error));
@@ -30,7 +30,7 @@ const Movie = () => {
 
     useEffect(() => {
         //리엑트에서 데이터 가져오는 방법
-        fetch("https://api.themoviedb.org/3/search/movie?api_key=a3c2b7c652a8a847c713f7040bb7cc1d&language=ko-KO&page=1&include_adult=false&query=marvel")
+        fetch("https://api.themoviedb.org/3/search/movie?api_key=a3c2b7c652a8a847c713f7040bb7cc1d&language=ko-KO&query=marvel&page=1&include_adult=false&region=KR")
             .then((response) => response.json())
             .then((result) => setMovies(result.results))
             .catch((error) => console.log(error));
