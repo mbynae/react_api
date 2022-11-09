@@ -35,6 +35,7 @@ const Movie = () => {
             .then((result) => setMovies(result.results))
             .catch((error) => console.log(error));
     }, []);
+
     return (
         <>
             <Header />
