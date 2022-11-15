@@ -76,13 +76,14 @@ import React from "react";
 //     );
 // };
 
-const ReferText = ({num, title, desc}) => {
+const ReferText = ({num, title, desc, star}) => {
     return (
         <li>
             <a href="#">
                 <span className="num">{num}</span>
                 <span className="name">{title}</span>
                 <span className="desc">{desc}</span>
+                <span className="star">{star}</span>
             </a>
         </li>
     );
@@ -99,9 +100,10 @@ const ReferCont = ({ references }) => {     //페이지에서 뿌려준 변수�
                         {references.map((refer, idx) => (
                             <ReferText 
                                 key = {idx}
-                                id = {refer.id}
+                                num = {refer.num}
                                 title = {refer.title}
                                 desc = {refer.desc}
+                                star = {refer.descStar}
                             />
                         ))};
                     </ul>
