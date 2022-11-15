@@ -14,10 +14,10 @@ const Reference = () => {
     const [references, setReferences] = useState([]);   //리엑트 훅에서 변수 설정
 
     useEffect(() => {
-        fetch("https://webstoryboy.github.io/react2022/src/assets/json/refer.json")
+        fetch("https://raw.githubusercontent.com/mbynae/react_api/main/src/utils/reference.json")
         .then(response => response.json())      //체인이란 기능으로 점을 붙였기 때문에 세미콜론을 붙이면 안된다.
         // .then(result => console.log(result.data.htmlRefer))     //이런식으로 괄호안에 불러오고 싶은 값만 불러올 수 있음
-        .then(result => setReferences(result.data.htmlRefer))       //reference에 저장된 값이 바뀌면 setReferences에서 자동으로 감지하기 때문에 setReferences에 데이터를 저장한다.
+        .then(result => setReferences(result.cssRefer))       //reference에 저장된 값이 바뀌면 setReferences에서 자동으로 감지하기 때문에 setReferences에 데이터를 저장한다.
         .catch(error => console.log('error', error));
     }, []);
 
@@ -29,7 +29,7 @@ const Reference = () => {
     //     .catch(error => console.log('error', error));
     // }, []);
 
-    // https://mbynae.github.io/react_api/src/utils/reference.json
+    // https://webstoryboy.github.io/react2022/src/assets/json/refer.json
     return (
         <>
             <Header />
