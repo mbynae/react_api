@@ -1,6 +1,6 @@
 import React, { useRef } from "react"; //인풋박스에선 useeffect가 아니라 useRef를 쓴다.
 
-const MovieSearch = ({ onSearch }) => {
+const MovieSearch = ({ onSearch, onButton }) => {
     const inputRef = useRef();
 
     const handleSearch = () => {
@@ -17,6 +17,19 @@ const MovieSearch = ({ onSearch }) => {
     const onClick = () => {
         handleSearch();
     };
+
+    const movieTag = document.querySelectorAll(".movie_tag span em");
+    movieTag.forEach((e) => {
+        e.addEventListener("click", () => {
+            tagClick(e.innerText)
+        });
+    });    
+
+    const tagClick = (data) => {
+        onButton(data);
+    };
+ 
+
     return (
         <div className="movie__search">
             <div className="container">
@@ -25,6 +38,14 @@ const MovieSearch = ({ onSearch }) => {
                 <button type="submit" onClick={onClick}>
                     검색
                 </button>
+                <div className="movie_tag">
+                    <span>#<em>마블</em></span>
+                    <span>#<em>DC</em></span>
+                    <span>#<em>전쟁</em></span>
+                    <span>#<em>드라마</em></span>
+                    <span>#<em>액션</em></span>
+                    <span>#<em>역사</em></span>
+                </div>
             </div>
         </div>
     );

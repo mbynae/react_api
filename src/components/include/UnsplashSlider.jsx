@@ -10,7 +10,7 @@ function UnsplashRandom({ random }) {
   return (
     <li>
       <a href={`https://unsplash.com/photos/${random.id}`}>
-        <img src={random.urls.regular} alt={random.alt_description} />
+        <img src={random.urls.regular} alt={random.alt_description} className="youtubeSlideImg"/>
       </a>
     </li>
   );

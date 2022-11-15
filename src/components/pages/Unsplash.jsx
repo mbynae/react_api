@@ -7,7 +7,6 @@ import Title from "../layout/Title";
 import UnsplashCont from "../include/UnsplashCont";
 import UnsplashSearch from "../include/UnsplashSearch";
 import UnsplashSlider from "../include/UnsplashSlider";
-import UnsplashBtn from "../include/UnsplashBtn";
 import Contact from "../layout/Contact";
 
 const Unsplash = () => {
@@ -16,6 +15,14 @@ const Unsplash = () => {
     
 
     const search = async (query) => {
+        //자바스크립트에서 데이터 가져오는 방법
+        await fetch(`https://api.unsplash.com/search/photos?client_id=GFU0S66m9fkwgOoQ6SxTubYmsJazE-k1yygT2XVI-Uw&count=20&query=${query}`)
+            .then((response) => response.json())
+            .then((result) => setImages(result.results))
+            .catch((error) => console.log(error));
+    };
+
+    const button = async (query) => {
         //자바스크립트에서 데이터 가져오는 방법
         await fetch(`https://api.unsplash.com/search/photos?client_id=GFU0S66m9fkwgOoQ6SxTubYmsJazE-k1yygT2XVI-Uw&count=20&query=${query}`)
             .then((response) => response.json())
@@ -42,8 +49,7 @@ const Unsplash = () => {
             <Contents>
                 <Title title={["unsplash", "reference api"]} />
                 <UnsplashSlider random={randoms} />
-                <UnsplashSearch onSearch={search} />
-                <UnsplashBtn />
+                <UnsplashSearch onSearch={search} onButton={button}  />
                 <UnsplashCont images={images} />
                 <Contact />
             </Contents>

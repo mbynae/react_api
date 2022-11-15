@@ -7,12 +7,13 @@ import Title from "../layout/Title";
 import MovieCont from "../include/MovieCont";
 import Contact from "../layout/Contact";
 import MovieSearch from "../include/MovieSearch";
+// import MovieButton from "../include/MovieButton";
 import MovieList from "../include/MovieList";
 
 const Movie = () => {
     const [movies, setMovies] = useState([]);
     const [listmovies, setlist] = useState([]);
-    // const [airbnb, setAirbnb] = useState([]);
+
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=a3c2b7c652a8a847c713f7040bb7cc1d&language=ko-KO&page=1&region=KR`)
@@ -22,6 +23,14 @@ const Movie = () => {
     }, []);
 
     const search = async (query) => {
+        //자바스크립트에서 데이터 가져오는 방법
+        await fetch(`https://api.themoviedb.org/3/search/movie?api_key=a3c2b7c652a8a847c713f7040bb7cc1d&language=ko-KO&query=${query}&page=1&include_adult=false&region=KR`)
+            .then((response) => response.json())
+            .then((result) => setMovies(result.results))
+            .catch((error) => console.log(error));
+    };
+
+    const button = async (query) => {
         //자바스크립트에서 데이터 가져오는 방법
         await fetch(`https://api.themoviedb.org/3/search/movie?api_key=a3c2b7c652a8a847c713f7040bb7cc1d&language=ko-KO&query=${query}&page=1&include_adult=false&region=KR`)
             .then((response) => response.json())
@@ -58,7 +67,8 @@ const Movie = () => {
             <Contents>
                 <Title title={["movie", "reference api"]} />
                 <MovieList list={listmovies}/>
-                <MovieSearch onSearch={search} />
+                <MovieSearch onSearch={search} onButton={button}/>
+                {/* <MovieButton onButton={button} /> */}
                 <MovieCont movies={movies} />
                 <Contact />
             </Contents>

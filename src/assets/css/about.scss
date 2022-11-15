@@ -1,0 +1,37 @@
+
+
+.cont__about {
+    color: var(--white);
+    padding: 0 40px;
+
+    img {
+        width: 900px;
+        height: 500px;
+    }
+
+    h3 {
+        font-size: 40px;
+        padding: 20px 0;
+    }
+    p {
+        width: 550px;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .about__article {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+
+        .first__right {
+            
+        }
+        .first__left {
+            margin-top: 200px;
+        }
+
+
+    }
+}
+

@@ -97,6 +97,15 @@
         cursor: pointer;
         z-index: 1000;
     }
+    .movie_tag {
+        color: var(--white);
+
+        span {
+            display: inline-block;
+            padding: 10px 5px;
+            cursor: pointer;
+        }
+    }
 }
 
 .movie__PopularBox {

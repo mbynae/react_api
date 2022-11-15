@@ -1,8 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/scrollbar";
+import { Scrollbar, Mousewheel } from "swiper";
 
 function YoutubeRan({ random }) {
   return (
@@ -23,13 +23,16 @@ const YoutubeSlider = ({ random }) => {
         <div className="popular__inner">
           <h2>Youtube Ranking</h2>
           <Swiper
-            slidesPerView={3}
+            direction={"horizontal"}
+            slidesPerView={"auto"}
             spaceBetween={30}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
+            mousewheel={true}
+            modules={[Mousewheel, Scrollbar]}
             className="mySwiper"
+            centeredSlides={true}
+            scrollbar={{
+              hide: true,
+            }}
           >
             {random.map((random, index) =>
               index < 20 ? (

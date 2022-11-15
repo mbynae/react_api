@@ -11,7 +11,7 @@ const About = () => {
         <>
             <Header />
             <Contents>
-                <Title title={["about", "reference api"]} />
+                <Title title={["about Me"]} />
                 <AboutCont />
                 <Contact />
             </Contents>
