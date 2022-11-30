@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 
 // const referInfo = [
@@ -76,10 +78,10 @@ import React from "react";
 //     );
 // };
 
-const ReferText = ({num, title, desc, star}) => {
+const ReferText = ({ num, title, desc, star }) => {
     return (
         <li>
-            <a href="#">
+            <a href="/">
                 <span className="num">{num}</span>
                 <span className="name">{title}</span>
                 <span className="desc">{desc}</span>
@@ -89,8 +91,9 @@ const ReferText = ({num, title, desc, star}) => {
     );
 };
 
-const ReferCont = ({ references }) => {     //페이지에서 뿌려준 변수를 이렇게 받아와야 함
-    console.log(references)
+const ReferCont = ({ references }) => {
+    //페이지에서 뿌려준 변수를 이렇게 받아와야 함
+    console.log(references);
     return (
         <section className="cont__refer">
             <div className="container">
@@ -98,14 +101,15 @@ const ReferCont = ({ references }) => {     //페이지에서 뿌려준 변수�
                     <h2>CSS</h2>
                     <ul className="refer__list">
                         {references.map((refer, idx) => (
-                            <ReferText 
-                                key = {idx}
-                                num = {refer.num}
-                                title = {refer.title}
-                                desc = {refer.desc}
-                                star = {refer.descStar}
+                            <ReferText
+                                key={idx}
+                                num={refer.num}
+                                title={refer.title}
+                                desc={refer.desc}
+                                star={refer.descStar}
                             />
-                        ))};
+                        ))}
+                        ;
                     </ul>
                 </div>
             </div>
